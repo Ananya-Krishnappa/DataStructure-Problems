@@ -2,7 +2,7 @@ package bridgelabz.DataStructure_Problems;
 
 import java.util.NoSuchElementException;
 
-public class LinkedList<T extends Comparable<T>> {
+public class LinkedList<T> {
 	Node<T> head;
 	private int size = 0;
 
@@ -130,8 +130,8 @@ public class LinkedList<T extends Comparable<T>> {
 	 * @param value
 	 * @return
 	 */
-	public int searchByValue(T value) {
-		Node<T> currNode = head;
+	public <T extends Comparable<T>> int searchByValue(T value) {
+		Node<T> currNode = (Node<T>) head;
 		int index = 0;
 		if (null != currNode) {
 			while ((null != currNode.next) || (null != currNode.value)) {
