@@ -29,8 +29,8 @@ public class UnorderedListMain<T> {
 			list.add(searchWord);
 		} else {
 			list.removeAtIndex(searchResult);
-			writeFile();
 		}
+		writeFile();
 	}
 
 	/**
