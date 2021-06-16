@@ -4,7 +4,7 @@ import java.util.NoSuchElementException;
 
 public class LinkedList<T extends Comparable<T>> {
 	Node<T> head;
-	private int size;
+	private int size = 0;
 
 	/**
 	 * Appends the specified element to the end of this list.
@@ -74,6 +74,16 @@ public class LinkedList<T extends Comparable<T>> {
 			nodeAtPreviousIndex.next = newNode;
 			size++;
 		}
+	}
+
+	/**
+	 * Retrieves, but does not remove, the head (first element) of this list.
+	 *
+	 * @return the head of this list, or {@code null} if this list is empty
+	 */
+	public T peek() {
+		final Node<T> f = head;
+		return (f == null) ? null : f.value;
 	}
 
 	/**
